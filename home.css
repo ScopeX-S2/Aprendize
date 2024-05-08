@@ -1,0 +1,14 @@
+main {
+    background-image: url(Home-BG.jpg);
+    background-size: cover;
+    background-position: 50%;
+
+    float: right;
+    width: calc(100% - 95px);
+    height: 100%;
+    padding: 75px;
+}
+
+main .next_EVENT {
+    width: calc(100% - 95px);
+}

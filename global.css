@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: auto;
+}
+
+:root {
+    --color-light: #ffeedec9;
+}
+
+body {
+    background: #131313;
+    color: var(--color-light);
+
+    height: 100vh;
+
+    counter-reset: section;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+#top_BAR {
+    width: calc(100% - 95px);
+    height: 95px;
+    padding: 0px 75px 0px 20px;
+
+    position: fixed;
+    right: 0%;
+    top: 0%;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#top_BAR #brand button {
+    color: var(--color-light);
+    background: 0;
+    border: 0;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#top_BAR #brand button strong {
+    font-size: 1.6rem;
+}
+
+#top_BAR #brand button .logo_IMG {
+    width: 40px;
+    height: 40px;
+    background-image: url(Aprendize.svg);
+    margin-right: 15px;
+}
+
+#top_BAR nav {
+    background: #2f2f2f;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px 8px #0000002b;
+
+    padding: 20px;
+}
+
+#top_BAR nav ul {
+    display: flex;
+}
+
+#top_BAR nav ul a {
+    color: var(--color-light);
+}
+
+#top_BAR nav ul a li {
+    padding: 0px 20px;
+}
+
+#top_BAR nav ul a li.select {
+    color: white;
+}
+
+/* Side bar */
+
+#side_BAR {
+    width: 95px;
+    /* top_BAR | width: calc(100% - 95px); */
+    height: 100%;
+
+    background: #1c1c1c;
+    box-shadow: 0px 0px 12px 12px #0000001d;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#side_BAR .menu {
+    width: 100%;
+}
+
+#side_BAR .menu button {
+    width: 100%;
+    height: 95px;
+
+    background: #2f2f2f;
+    border: 0;
+    font-size: 1.6rem;
+    color: var(--color-light);
+}
+
+#side_BAR button {
+    background: 0;
+    border: 0;
+}
+
+#side_BAR a button i {
+    margin: 25px;
+    color: white;
+    font-size: 2rem;
+}
+
+main .about_INFO {
+    width: 100%;
+    height: 60%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+main .about_INFO .progress {
+    margin: 10px 0px;
+
+    width: 80%;
+    height: 5px;
+    background: #5f5f5f;
+    border-radius: 5px;
+}
+
+main .about_INFO .progress .value {
+    width: 70%;
+    height: 100%;
+    background: var(--color-light);
+    border-radius: 5px;
+}
+
+main .about_INFO .power h1 {
+    margin: 5px 0px;
+    font-weight: 900;
+}
+
+main .about_INFO .power ol li {
+    padding: 5px 0px;
+}
+
+main .about_INFO .power ol li::before {
+    color: #8fbe7a;
+    counter-increment: section;
+    content: "0" counter(section) ". ";
+}
+
+main .about_INFO .about {
+    width: 35%;
+    transform: translate(-120px, 85px);
+}
+
+main .about_INFO .about h2 {
+    font-size: 3rem;
+}
+
+main .about_INFO .about p {
+    margin: 20px 0px;
+    line-height: 1.7rem;
+}
+
+main .about_INFO .about p a {
+    color: var(--color-light);
+    text-decoration: underline;
+}
+
+.next_EVENT {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+
+    width: 100%;
+    height: 220px;
+    background-color: #13131395;
+    backdrop-filter: blur(5px);
+
+    display: flex
+}
+
+.next_EVENT .primary {
+    width: 40%;
+    display: flex;
+}
+
+.next_EVENT .secundary {
+    width: 60%;
+    display: flex;
+}
+
+.next_EVENT .secundary .new_NAME,
+.next_EVENT .primary .new_NAME {
+    padding: 50px;
+
+    width: 68%;
+    height: 220px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.next_EVENT .primary .new_NAME {
+    width: 100%;
+}
+
+.button-primary {
+    padding: 10px 0px;
+    color: #ffd2aac1;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+}
+
+.next_EVENT .secundary h4,
+.next_EVENT .primary h4 {
+    color: #ffeede76;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.next_EVENT .secundary p,
+.next_EVENT .primary p {
+    padding: 10px 0px;
+}
+
+.next_EVENT .secundary .image_NEW,
+.next_EVENT .primary .image_NEW {
+    width: 220px;
+    height: 220px;
+    background-image: url(https://frotas.localiza.com/wp-content/uploads/homem-e-mulher-saindo-do-carro-na-natureza.jpg);
+    background-size: cover;
+    background-position: 50%;
+}
+
+.back {
+    padding: 0px 25px;
+    height: 40px;
+
+    position: fixed;
+    top: 5%;
+    left: 3%;
+
+    transform: translate(-5%, -3%);
+
+    border: 1px solid #ccc;
+    display: flex;
+    background: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+    cursor: pointer;
+    z-index: 999;
+    color: var(--color-light);
+}
+
+.back i {
+    margin-right: 10px;
+}
+
+.load_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 9998;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #000000;
+}
+
+.loader {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-top: 8px solid #7b0000;
+    border-left: 8px solid #fff;
+    border-right: 8px solid #ff00;
+    animation: loader .7s infinite linear;
+}
+
+@keyframes loader {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.play_MAIN,
+.inv {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #ffffff5d;
+    backdrop-filter: blur(3px);
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 17px;
+    padding: 16px;
+    width: 160px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.inv {
+    border: 2px solid #ffffff5d;
+    background: 0;
+}
+
+.play_MAIN span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 1s;
+}
+
+.play_MAIN span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+.play_MAIN:hover span {
+    padding-right: 15px;
+}
+
+.play_MAIN:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+footer {
+    width: calc(100% - 95px);
+    height: 10vh;
+    float: right;
+
+    background: #2f2f2f75;
+}
